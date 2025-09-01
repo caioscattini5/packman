@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+  <title>LAN Pac-like (8 Players)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div class="row">
+      <label>Nickname</label>
+      <input id="nick" maxlength="16" placeholder="Player" />
+      <button id="saveNick">Save</button>
+    </div>
+    <div class="row">
+      <span id="info"></span>
+    </div>
+  </div>
+
+  <div id="hud">
+    <div id="scoreboard"></div>
+  </div>
+
+  <div id="game-wrap">
+    <canvas id="game" width="800" height="600"></canvas>
+  </div>
+
+  <!-- mobile controls -->
+  <div id="touch-controls" class="hidden">
+    <button class="dir" id="btn-up">▲</button>
+    <div class="row">
+      <button class="dir" id="btn-left">◀</button>
+      <button class="dir" id="btn-down">▼</button>
+      <button class="dir" id="btn-right">▶</button>
+    </div>
+  </div>
+
+  <div id="overlay" class="hidden"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
